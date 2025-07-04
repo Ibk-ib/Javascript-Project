@@ -16,13 +16,13 @@ body {
   width: 30%;
   height: 200px;
   display: block;
-  padding: 40px;
+  padding: 20px;
   overflow: auto;
 }
 @media (max-width: 768px) {
   .container{
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
   }
 }
 @media (min-width: 769px) and (max-width: 1023px){
