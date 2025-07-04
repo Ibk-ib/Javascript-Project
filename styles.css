@@ -1,26 +1,75 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background: #000000;
   display: flex;
+  box-sizing: border-box;
+  height: 100vh;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container {
   background: white;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  width: 300px;
+  width: 30%;
+  height: 200px;
+  display: block;
+  padding: 40px;
+  overflow: auto;
 }
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px){
+  .container{
+    width: 50%;
+    padding: 20px;
+  }
+}
+.animate{
+  animation: slideIn 5s infinite;
+}
+@keyframes slideIn {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      50%{
+        color: rgb(143, 140, 140);
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+        color: rgb(0, 0, 0);
+      }
+    }
 
 input {
-  width: 70%;
+  width: 50%;
   padding: 8px;
 }
 
-button {
-  padding: 8px;
+.btnadd{
+  padding: 8px 20px;
+  width: 20%;
+  background-color: white;
+  border: 2px solid rgb(143, 142, 142);
+  border-radius: 5px;
+  transition: 0.7s;
+}
+.btnadd:hover{
+  padding: 8px 20px;
+  width: 20%;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  border: 2px solid rgb(43, 42, 42);
+  transition: 0.7s;
+  transform: translate(2px, 2px);
 }
 
 ul {
@@ -30,12 +79,12 @@ ul {
 }
 
 li {
-  padding: 6px;
-  background: #e0e0e0;
+  padding: 10px;
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 2px solid rgb(151, 151, 151);
 }
 
 li button {
