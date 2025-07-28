@@ -1,15 +1,15 @@
 body {
   font-family: Arial, sans-serif;
   background: #000000;
-  display: flex;
   box-sizing: border-box;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  padding: 50px 20px;
+  margin-left: 300px;
 }
 
 .container {
+  display: flex;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -20,12 +20,18 @@ body {
   overflow: auto;
 }
 @media (max-width: 768px) {
+  body{
+    margin-left: 0;
+  }
   .container{
     width: 100%;
     padding: 10px 20px;
   }
 }
 @media (min-width: 769px) and (max-width: 1023px){
+  body{
+    margin-left: 0;
+  }
   .container{
     width: 50%;
     padding: 20px;
@@ -92,4 +98,40 @@ li button {
   color: white;
   border: none;
   cursor: pointer;
+}
+.completed span{
+   text-decoration: line-through;
+    color: gray;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  appearance: auto; /* makes it show normally */
+}
+
+
+
+
+
+#section2{
+  width: 100%;
+}
+#redbg, #bluebg, #greenbg{
+  background-color: white;
+  width: 200px;
+  height: 200px;
+}
+#colorchanger{
+  padding: 20px;
+}
+.containercolor{
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.buttoncontainer{
+  display: flex;
+  gap: 60px;
+  margin-top: 20px;
 }
