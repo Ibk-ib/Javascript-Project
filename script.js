@@ -1,26 +1,4 @@
-// function addTask() {
-//   const input = document.getElementById("taskInput");
-//   const task = input.value.trim();
-
-//   if (task === "") {
-//     alert("Please enter a task.");
-//     return;
-//   }
-
-//   const li = document.createElement("li");
-//   li.textContent = task;
-
-//   const delBtn = document.createElement("button");
-//   delBtn.textContent = "X";
-//   delBtn.onclick = function () {
-//     li.remove();
-//   };
-
-//   li.appendChild(delBtn);
-//   document.getElementById("taskList").appendChild(li);
-
-//   input.value = ""; // clear input
-// }
+                                      // TO-DO APP
 
 
 window.onload = function(){
@@ -100,6 +78,46 @@ function displayTask(task){
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
+
+
+                                    // STOPWATCH
+
+  let seconds = 0;
+  let intervalId = null;
+
+  function formatTime(seconds) {
+    const hrs = String(Math.floor(seconds / 3600)).padStart(2, "0");
+    const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+    const secs = String(Math.floor(seconds % 60)).padStart(2, "0");
+    return `${hrs}:${mins}:${secs}`
+  }
+
+  function updateDisplay() {
+    const clock = document.getElementById("clock");
+    clock.textContent = formatTime(seconds);
+  }
+
+  function startStopwatch() {
+    if (intervalId) return;
+    intervalId = setInterval (() => {
+      seconds++;
+      updateDisplay();
+    }, 1000);
+  }
+  
+  function stopStopwatch() {
+    clearInterval (intervalId);
+    intervalId = null;
+  }
+
+  function resetStopwatch() {
+    stopStopwatch();
+    seconds = 0;
+    updateDisplay();
+  }
+                                      // COLOR BG
+
+
   function changeRed(){
     document.getElementById("redbg").style.backgroundColor = "red";
   }
@@ -109,3 +127,6 @@ function displayTask(task){
   function changeBlue(){
     document.getElementById("bluebg").style.backgroundColor = "blue";
   }
+
+
+

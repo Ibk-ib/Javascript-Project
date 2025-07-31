@@ -3,9 +3,9 @@ body {
   background: #000000;
   box-sizing: border-box;
   height: 100vh;
-  overflow: hidden;
-  padding: 50px 20px;
-  margin-left: 300px;
+  overflow: auto;
+  padding: 50px 10px;
+  margin-left: 200px;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
     padding: 20px;
   }
 }
-.animate{
+.animatetodo{
   animation: slideIn 5s infinite;
 }
 @keyframes slideIn {
@@ -111,7 +111,7 @@ input[type="checkbox"] {
 }
 
 
-
+                                      /* COLOR BG */
 
 
 #section2{
@@ -135,3 +135,81 @@ input[type="checkbox"] {
   gap: 60px;
   margin-top: 20px;
 }
+
+
+
+
+                                            /* DIGITAL TIMER */
+  .clock-container {
+  background: #1e1e2f;
+  padding: 30px 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #ffffff;
+  max-width: 50%;
+  margin-top: 20px;
+}
+
+#clock {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
+}
+
+
+.animatedigit{
+  animation: slideIn 5s infinite;
+}
+@keyframes slideIn {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      50%{
+        color: rgb(150, 145, 145);
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+
+@media (max-width: 600px) {
+  #clock {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}                                          

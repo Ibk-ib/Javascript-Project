@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do List App</title>
+    <title>Javascript Projects</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+                              <!-- TO-DO APP -->
+
     <div class="container">
-        <h2 class="animate">My To-Do List</h2>
+        <h2 class="animatetodo">My To-Do List</h2>
         <input type="text" id="taskInput" placeholder="Enter a new task">
         <button class="btnadd" onclick="addTask()">Add</button>
         <ul id="taskList"></ul>
@@ -16,7 +19,10 @@
 
 
 
-<section id="section2">
+                                        <!-- COLOR BG -->
+
+
+<!-- <section id="section2">
   <div class="containercolor">
     <div id="redbg"></div>
     <div id="greenbg"></div>
@@ -27,7 +33,22 @@
     <button id="colorchanger" onclick="changeGreen()">click</button>
     <button id="colorchanger" onclick="changeBlue()">click</button>
   </div>
-</section>
+</section> -->
+
+
+                      <!-- Digital timer -->
+  <div class="clock-container">
+    <h1 class="animatedigit">STOP WATCH</h1>
+    <h1 id="clock" class="animatetimer">00:00:00</h1>
+    <div class="button-group">
+      <button class="btn" onclick="startStopwatch()">Start</button>
+      <button class="btn" onclick="stopStopwatch()">Stop</button>
+      <button class="btn" onclick="resetStopwatch()">Reset</button>
+      <!-- <button class="btn" onclick="toggleFormat()">Toggle 12/24hr</button> -->
+    </div>
+  </div>
+
+
 
   <script src="script.js"></script>
 </body>
